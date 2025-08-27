@@ -126,15 +126,19 @@ const App = () => {
     },
   ]);
 
-  const [selectCategory, setSelectCategory] = useState<"animaux" | "nature" | "personnes">("animaux");
+  const [selectCategory, setSelectCategory] = useState<"all"|"animaux" | "nature" | "personnes">("all");
 
+  //filtrage d'image en fonction de la cathegorie
+  const filteredImages =  selectCategory === "all" ? images :
+    images.filter((img) => img.categorie === selectCategory)
+e
   useEffect(()=>{
-    
+
   })
 
   return <div className="flex flex-col items-center justify-center m-5 p-10">
-    <FilterMenu/>
-    <Gallery/>
+    <FilterMenu onCategoryChange={setSelectCategory}/>
+    <Gallery images={filteredImages}/>
   </div>;
 };
 
