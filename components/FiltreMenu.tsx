@@ -10,7 +10,7 @@ const FiltreMenu = ({ onCategoryChange }: Props) => {
   return (
     <div className="flex items-center justify-between bg-gray-300 w-full p-2 rounded-md">
       <div>
-        <h1 className="text-xl font-bold">Photo Gallery</h1>
+        <h1 className="text-xl font-bold">Photo Galerie</h1>
       </div>
       <div>
         <ul className="flex gap-6">
@@ -18,7 +18,7 @@ const FiltreMenu = ({ onCategoryChange }: Props) => {
             className="text-xl font-bold text-white bg-blue-300 p-1 m-1 rounded-xl cursor-pointer"
             onClick={() => onCategoryChange("all")}
           >
-            All
+            Tous
           </button>
           <button
             className="text-xl font-bold text-white bg-blue-300 p-1 m-1 rounded-xl cursor-pointer"
