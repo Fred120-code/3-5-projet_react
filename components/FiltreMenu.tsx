@@ -18,8 +18,10 @@ const categories = [
 // Composant FiltreMenu qui affiche le menu de filtres
 const FiltreMenu = ({ onCategoryChange }: Props) => {
   return (
-    <div className="lg:flex lg:flex-row lg:items-center lg:justify-between bg-gray-300 w-full p-2 rounded-md
-                        sm:flex-col sm:flex sm:justify-center sm:items-center">
+    <div
+      className="lg:flex lg:flex-row lg:items-center lg:justify-between bg-gray-300 w-full p-2 rounded-md
+                        sm:flex-col sm:flex sm:justify-center sm:items-center"
+    >
       <div>
         <h1 className="text-xl font-bold">Photo Galerie</h1>
       </div>
