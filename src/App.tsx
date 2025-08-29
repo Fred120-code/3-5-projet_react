@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Gallery from "../components/Gallery";
-import FilterMenu from "../components/FiltreMenu";
+import FiltreMenu from "../components/FiltreMenu"; // Correction du nom d'import
 
 type Image = {
   id: number;
@@ -83,7 +83,7 @@ const App = () => {
     "all" | "animaux" | "nature" | "personnes"
   >("all");
 
-  //filtrage d'image en fonction de la cathegorie
+  // Filtrage d'image en fonction de la catégorie sélectionnée
   const filteredImages =
     selectCategory === "all"
       ? images
@@ -91,7 +91,9 @@ const App = () => {
 
   return (
     <div className="flex flex-col items-center justify-center m-5 p-10">
-      <FilterMenu onCategoryChange={setSelectCategory} />
+      {/* Menu de filtre des catégories */}
+      <FiltreMenu onCategoryChange={setSelectCategory} />
+      {/* Galerie d'images filtrée */}
       <Gallery images={filteredImages} />
     </div>
   );
